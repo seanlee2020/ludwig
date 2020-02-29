@@ -1,0 +1,18 @@
+input_features:
+    -
+        name: query
+        type: text
+        level: word
+        encoder: rnn
+        cell_type: lstm
+        bidirectional: true
+        num_layers: 2
+        reduce_output: null
+        preprocessing:
+          word_format: space
+
+output_features:
+    -
+        name: tags
+        type: sequence
+        decoder: tagger
